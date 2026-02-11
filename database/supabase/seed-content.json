@@ -1,0 +1,198 @@
+{
+  "radicals": [
+    {
+      "id": "radical-ground",
+      "character": "一",
+      "name": "Ground",
+      "name_pt": "Chao",
+      "level_id": 1,
+      "mnemonic": "This is the ground. Look at it, just a flat line that stretches from one side to the other. That is the ground.",
+      "mnemonic_pt": "Isto e o chao. Olhe para ele, apenas uma linha plana que se estende de um lado ao outro. Isso e o chao."
+    },
+    {
+      "id": "radical-barb",
+      "character": "亅",
+      "name": "Barb",
+      "name_pt": "Farpa",
+      "level_id": 1,
+      "mnemonic": "This radical is shaped like a barb. Kind of like the barb you'd see on a barbed fishing hook. Imagine that thing getting stuck in your arm.",
+      "mnemonic_pt": "Este radical tem a forma de uma farpa. Como a farpa que voce veria em um anzol de pesca. Imagine isso preso no seu braco."
+    },
+    {
+      "id": "radical-toe",
+      "character": "ト",
+      "name": "Toe",
+      "name_pt": "Dedo do pe",
+      "level_id": 1,
+      "mnemonic": "This radical looks like a toe. A big toe, specifically. Imagine wiggling your big toe around.",
+      "mnemonic_pt": "Este radical parece um dedo do pe. Um dedao, especificamente. Imagine mexendo seu dedao."
+    },
+    {
+      "id": "radical-tree",
+      "character": "木",
+      "name": "Tree",
+      "name_pt": "Arvore",
+      "level_id": 1,
+      "mnemonic": "This radical looks like a tree. You can see the trunk going up with branches spreading out and roots going down.",
+      "mnemonic_pt": "Este radical parece uma arvore. Voce pode ver o tronco subindo com galhos se espalhando e raizes descendo."
+    },
+    {
+      "id": "radical-mouth",
+      "character": "口",
+      "name": "Mouth",
+      "name_pt": "Boca",
+      "level_id": 1,
+      "mnemonic": "This radical looks like a mouth, wide open. It's a square shape, like a mouth opened as wide as possible to scream.",
+      "mnemonic_pt": "Este radical parece uma boca, bem aberta. E uma forma quadrada, como uma boca aberta o maximo possivel para gritar."
+    },
+    {
+      "id": "radical-big",
+      "character": "大",
+      "name": "Big",
+      "name_pt": "Grande",
+      "level_id": 1,
+      "mnemonic": "This radical shows a person stretching their arms and legs out wide, making themselves look as big as possible.",
+      "mnemonic_pt": "Este radical mostra uma pessoa esticando os bracos e pernas, se fazendo parecer o maior possivel."
+    }
+  ],
+  "kanji": [
+    {
+      "id": "kanji-ue",
+      "character": "上",
+      "meaning": "Above",
+      "meaning_pt": "Acima",
+      "alternatives": ["Up", "Over"],
+      "level_id": 1,
+      "onyomi": ["じょう"],
+      "kunyomi": ["うえ", "あ", "のぼ", "うわ", "かみ"],
+      "meaning_mnemonic": "You find a toe on the ground. It's weird, because it's above the ground, not where toes belong.",
+      "meaning_mnemonic_pt": "Voce encontra um dedo do pe no chao. E estranho, porque esta acima do chao, nao onde dedos do pe pertencem.",
+      "reading_mnemonic": "When you find a toe above the ground, you want to know where it came from. This toe belongs to Joe (じょう).",
+      "reading_mnemonic_pt": "Quando voce encontra um dedo do pe acima do chao, quer saber de onde veio. Este dedo pertence ao Joe (じょう)."
+    },
+    {
+      "id": "kanji-ichi",
+      "character": "一",
+      "meaning": "One",
+      "meaning_pt": "Um",
+      "alternatives": [],
+      "level_id": 1,
+      "onyomi": ["いち"],
+      "kunyomi": ["ひと"],
+      "meaning_mnemonic": "This kanji is one line. One single, simple line. What else could the meaning be? One.",
+      "meaning_mnemonic_pt": "Este kanji e uma linha. Uma unica linha simples. O que mais poderia significar? Um.",
+      "reading_mnemonic": "When you lay this one flat line on the ground, it becomes itchy (いち). The ground makes everything itchy.",
+      "reading_mnemonic_pt": "Quando voce coloca esta unica linha no chao, fica com coceira (いち). O chao deixa tudo com coceira."
+    },
+    {
+      "id": "kanji-sai",
+      "character": "才",
+      "meaning": "Talent",
+      "meaning_pt": "Talento",
+      "alternatives": ["Genius"],
+      "level_id": 1,
+      "onyomi": ["さい"],
+      "kunyomi": [],
+      "meaning_mnemonic": "This kanji contains a barb. When you have the talent to pull a barb out of someone, you are truly gifted.",
+      "meaning_mnemonic_pt": "Este kanji contem uma farpa. Quando voce tem o talento de tirar uma farpa de alguem, voce e realmente talentoso.",
+      "reading_mnemonic": "A talented person says 'sai' (さい) when they perform their skills.",
+      "reading_mnemonic_pt": "Uma pessoa talentosa diz 'sai' (さい) quando demonstra suas habilidades."
+    },
+    {
+      "id": "kanji-hayashi",
+      "character": "林",
+      "meaning": "Forest",
+      "meaning_pt": "Floresta",
+      "alternatives": ["Grove", "Woods"],
+      "level_id": 2,
+      "onyomi": ["りん"],
+      "kunyomi": ["はやし"],
+      "meaning_mnemonic": "Two trees together make a grove or forest. When you see two trees side by side, you know you're entering a forest.",
+      "meaning_mnemonic_pt": "Duas arvores juntas formam um bosque ou floresta. Quando voce ve duas arvores lado a lado, sabe que esta entrando numa floresta.",
+      "reading_mnemonic": "In the forest, you can hear a ring (りん) of a bell echoing through the trees.",
+      "reading_mnemonic_pt": "Na floresta, voce pode ouvir um toque (りん) de um sino ecoando entre as arvores."
+    }
+  ],
+  "kanji_radicals": [
+    { "kanji_id": "kanji-ue", "radical_id": "radical-toe" },
+    { "kanji_id": "kanji-ue", "radical_id": "radical-ground" },
+    { "kanji_id": "kanji-ichi", "radical_id": "radical-ground" },
+    { "kanji_id": "kanji-sai", "radical_id": "radical-barb" },
+    { "kanji_id": "kanji-hayashi", "radical_id": "radical-tree" }
+  ],
+  "vocabulary": [
+    {
+      "id": "vocab-ue",
+      "word": "上",
+      "reading": "うえ",
+      "meaning": "Above",
+      "meaning_pt": "Acima",
+      "level_id": 1,
+      "word_type": "substantivo, sufixo",
+      "meaning_explanation": "When a vocab word is a single kanji and alone, it tends to steal the meaning from the kanji. It means above or up.",
+      "meaning_explanation_pt": "Quando uma palavra de vocabulario e um unico kanji sozinho, ela tende a pegar o significado do kanji. Significa acima ou em cima.",
+      "reading_explanation": "When a vocab is a single kanji and all alone, it usually uses the kun'yomi. Above you is a huge weight (うえ).",
+      "reading_explanation_pt": "Quando um vocabulario e um unico kanji sozinho, geralmente usa a kun'yomi. Acima de voce ha um peso enorme (うえ).",
+      "context_sentences": [
+        { "ja": "山の上でヨガをしたいね。", "pt": "Quero fazer yoga no topo da montanha." },
+        { "ja": "上のフロアにキッチンがあります。", "pt": "Ha uma cozinha no andar de cima." },
+        { "ja": "リビングルームの上にロフトがあります。", "pt": "Ha um loft acima da sala de estar." }
+      ]
+    },
+    {
+      "id": "vocab-ageru",
+      "word": "上げる",
+      "reading": "あげる",
+      "meaning": "To Lift Something",
+      "meaning_pt": "Levantar Algo",
+      "level_id": 1,
+      "word_type": "verbo transitivo",
+      "meaning_explanation": "This word combines the kanji for above with the verb ending. It means to lift something up.",
+      "meaning_explanation_pt": "Esta palavra combina o kanji de acima com a terminacao verbal. Significa levantar algo.",
+      "reading_explanation": "The reading comes from the kun'yomi of the kanji. You lift (あげる) things above your head.",
+      "reading_explanation_pt": "A leitura vem da kun'yomi do kanji. Voce levanta (あげる) coisas acima da sua cabeca.",
+      "context_sentences": [
+        { "ja": "手を上げてください。", "pt": "Por favor, levante a mao." },
+        { "ja": "声を上げる。", "pt": "Levantar a voz." }
+      ]
+    },
+    {
+      "id": "vocab-ichi",
+      "word": "一",
+      "reading": "いち",
+      "meaning": "One",
+      "meaning_pt": "Um",
+      "level_id": 1,
+      "word_type": "numeral",
+      "meaning_explanation": "This is the number one. A single kanji that represents the number one.",
+      "meaning_explanation_pt": "Este e o numero um. Um unico kanji que representa o numero um.",
+      "reading_explanation": "The reading for this one is いち, the on'yomi reading.",
+      "reading_explanation_pt": "A leitura para este e いち, a leitura on'yomi.",
+      "context_sentences": [
+        { "ja": "一から始めましょう。", "pt": "Vamos comecar do um." }
+      ]
+    },
+    {
+      "id": "vocab-jouzu",
+      "word": "上手",
+      "reading": "じょうず",
+      "meaning": "Good At",
+      "meaning_pt": "Bom Em",
+      "level_id": 2,
+      "word_type": "adjetivo na",
+      "meaning_explanation": "This word combines 'above' with 'hand'. If your hand is above others, you are good at something.",
+      "meaning_explanation_pt": "Esta palavra combina 'acima' com 'mao'. Se sua mao esta acima dos outros, voce e bom em algo.",
+      "reading_explanation": "Both kanji use on'yomi readings here: じょう + ず = じょうず.",
+      "reading_explanation_pt": "Ambos os kanji usam leituras on'yomi aqui: じょう + ず = じょうず.",
+      "context_sentences": [
+        { "ja": "彼女はピアノが上手です。", "pt": "Ela e boa em piano." }
+      ]
+    }
+  ],
+  "vocabulary_kanji": [
+    { "vocabulary_id": "vocab-ue", "kanji_id": "kanji-ue" },
+    { "vocabulary_id": "vocab-ageru", "kanji_id": "kanji-ue" },
+    { "vocabulary_id": "vocab-ichi", "kanji_id": "kanji-ichi" },
+    { "vocabulary_id": "vocab-jouzu", "kanji_id": "kanji-ue" }
+  ]
+}
