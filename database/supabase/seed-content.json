@@ -51,8 +51,53 @@
       "name": "Big",
       "name_pt": "Grande",
       "level_id": 1,
-      "mnemonic": "This radical shows a person stretching their arms and legs out wide, making themselves look as big as possible.",
-      "mnemonic_pt": "Este radical mostra uma pessoa esticando os bracos e pernas, se fazendo parecer o maior possivel."
+      "mnemonic": "This radical looks just like a stick figure—more specifically, a really big guy with his arms stretched out nice and big. When you see this radical, just think big, because this guy is really BIG!",
+      "mnemonic_pt": "Este radical parece um boneco palito—um cara bem grande de bracos abertos. Quando vir este radical, pense em grande, porque este cara e realmente GRANDE!"
+    },
+    {
+      "id": "radical-lid",
+      "character": "亠",
+      "name": "Lid",
+      "name_pt": "Tampa",
+      "level_id": 1,
+      "mnemonic": "This looks like something you'd put on a kettle or a pot, right? It even has a little handle to make sure you don't burn yourself. This is some kind of lid.",
+      "mnemonic_pt": "Parece algo que voce colocaria numa chaleira ou panela. Tem ate uma alcinha para nao se queimar. E uma especie de tampa."
+    },
+    {
+      "id": "radical-person",
+      "character": "人",
+      "name": "Person",
+      "name_pt": "Pessoa",
+      "level_id": 1,
+      "mnemonic": "This is a person. They're standing with their arms down at their sides and their legs spread out, which kind of makes them look like a torso with a pair of legs. Think of 人 as highlighting the bipedal nature of people. Walking on two legs? Probably a person.",
+      "mnemonic_pt": "Esta e uma pessoa. De pe com os bracos ao lado e as pernas afastadas, como um torso com pernas. 人 destaca a natureza bipedia das pessoas. Andando em duas pernas? Provavelmente uma pessoa."
+    },
+    {
+      "id": "radical-enter",
+      "character": "入",
+      "name": "Enter",
+      "name_pt": "Entrar",
+      "level_id": 1,
+      "mnemonic": "Watch out! This isn't the person radical, it's something else. What's the difference? The right side is longer than the left. This radical also has that extra part sticking out at the top. See it? It kind of looks like a person lowering their head to go inside a tent or something. That's why this radical is enter.",
+      "mnemonic_pt": "Atencao! Nao e o radical de pessoa. O lado direito e mais longo que o esquerdo, e ha uma parte extra no topo. Parece alguem baixando a cabeca para entrar numa tenda. Por isso este radical e entrar."
+    },
+    {
+      "id": "radical-power",
+      "character": "力",
+      "name": "Power",
+      "name_pt": "Forca",
+      "level_id": 1,
+      "mnemonic": "Imagine a guy flexing his arm downward to show off his steroid-pumped arm. It's huge. It's so full of power. RARRRWWWRRR!!",
+      "mnemonic_pt": "Imagine um cara flexionando o braco para baixo mostrando o musculo. E enorme. Cheio de forca. RARRRWWWRRR!!"
+    },
+    {
+      "id": "radical-dog",
+      "character": "犬",
+      "name": "Dog",
+      "name_pt": "Cachorro",
+      "level_id": 1,
+      "mnemonic": "The dog radical and dog kanji are exactly the same!",
+      "mnemonic_pt": "O radical cachorro e o kanji cachorro sao exatamente iguais!"
     }
   ],
   "kanji": [
@@ -111,6 +156,49 @@
       "meaning_mnemonic_pt": "Duas arvores juntas formam um bosque ou floresta. Quando voce ve duas arvores lado a lado, sabe que esta entrando numa floresta.",
       "reading_mnemonic": "In the forest, you can hear a ring (りん) of a bell echoing through the trees.",
       "reading_mnemonic_pt": "Na floresta, voce pode ouvir um toque (りん) de um sino ecoando entre as arvores."
+    },
+    {
+      "id": "kanji-dai",
+      "character": "大",
+      "meaning": "Big",
+      "meaning_pt": "Grande",
+      "alternatives": ["Large"],
+      "level_id": 1,
+      "onyomi": ["たい", "だい"],
+      "kunyomi": ["おお"],
+      "nanori": ["ひろ"],
+      "meaning_mnemonic": "The big radical and the big kanji are exactly the same!",
+      "meaning_mnemonic_pt": "O radical grande e o kanji grande sao exatamente iguais!",
+      "reading_mnemonic": "There's this big guy (that's how you remember the radical, remember?), and he's wearing a huge Tie Dye (たい, だい) shirt. Because he's so huge, the tie dye shirt is also super huge. Everything about him is pretty big, but the tie dye stands out more than anything.",
+      "reading_mnemonic_pt": "Aquele cara grande esta usando uma camisa tie dye (たい, だい) enorme. Como ele e enorme, a camisa tambem e. Tudo nele e grande, mas o tie dye se destaca."
+    },
+    {
+      "id": "kanji-person",
+      "character": "人",
+      "meaning": "Person",
+      "meaning_pt": "Pessoa",
+      "alternatives": [],
+      "level_id": 1,
+      "onyomi": ["じん", "にん"],
+      "kunyomi": ["ひと"],
+      "meaning_mnemonic": "This is a person. They're standing with their arms down at their sides and their legs spread out.",
+      "meaning_mnemonic_pt": "Esta e uma pessoa. De pe com os bracos ao lado e as pernas afastadas.",
+      "reading_mnemonic": "A person is one (ひと) who walks on two legs.",
+      "reading_mnemonic_pt": "Uma pessoa e aquele que anda em duas pernas."
+    },
+    {
+      "id": "kanji-dog",
+      "character": "犬",
+      "meaning": "Dog",
+      "meaning_pt": "Cachorro",
+      "alternatives": [],
+      "level_id": 1,
+      "onyomi": ["けん"],
+      "kunyomi": ["いぬ"],
+      "meaning_mnemonic": "The dog radical and dog kanji are exactly the same!",
+      "meaning_mnemonic_pt": "O radical cachorro e o kanji cachorro sao exatamente iguais!",
+      "reading_mnemonic": "Every dog likes to eat noodles (いぬ). Like that movie where the dogs share a noodle and end up kissing, right? So when you see 犬, just imagine how those two eat noodles.",
+      "reading_mnemonic_pt": "Todo cachorro gosta de comer macarrao (いぬ). Como no filme onde os cachorros compartilham um macarrao. Quando vir 犬, imagine esses dois comendo macarrao."
     }
   ],
   "kanji_radicals": [
@@ -118,7 +206,10 @@
     { "kanji_id": "kanji-ue", "radical_id": "radical-ground" },
     { "kanji_id": "kanji-ichi", "radical_id": "radical-ground" },
     { "kanji_id": "kanji-sai", "radical_id": "radical-barb" },
-    { "kanji_id": "kanji-hayashi", "radical_id": "radical-tree" }
+    { "kanji_id": "kanji-hayashi", "radical_id": "radical-tree" },
+    { "kanji_id": "kanji-dai", "radical_id": "radical-big" },
+    { "kanji_id": "kanji-person", "radical_id": "radical-person" },
+    { "kanji_id": "kanji-dog", "radical_id": "radical-dog" }
   ],
   "vocabulary": [
     {
@@ -187,12 +278,49 @@
       "context_sentences": [
         { "ja": "彼女はピアノが上手です。", "pt": "Ela e boa em piano." }
       ]
+    },
+    {
+      "id": "vocab-otona",
+      "word": "大人",
+      "reading": "おとな",
+      "meaning": "Adult",
+      "meaning_pt": "Adulto",
+      "level_id": 1,
+      "word_type": "noun",
+      "meaning_explanation": "Big (大) plus person (人) — an adult is a full-grown person.",
+      "meaning_explanation_pt": "Grande (大) mais pessoa (人) — um adulto e uma pessoa crescida.",
+      "reading_explanation": "This word uses the kun'yomi おお for 大 and とな for 人, together おとな.",
+      "reading_explanation_pt": "Esta palavra usa kun'yomi おお para 大 e とな para 人, juntos おとな.",
+      "context_sentences": [
+        { "ja": "大人になったら、何になりたい？", "pt": "Quando crescer, o que voce quer ser?" }
+      ]
+    },
+    {
+      "id": "vocab-dog",
+      "word": "犬",
+      "reading": "いぬ",
+      "meaning": "Dog",
+      "meaning_pt": "Cachorro",
+      "level_id": 1,
+      "word_type": "noun",
+      "meaning_explanation": "This vocab made up of a single kanji shares its meaning with said single kanji. That meaning is dog.",
+      "meaning_explanation_pt": "Esta palavra de um unico kanji compartilha o significado do kanji. O significado e cachorro.",
+      "reading_explanation": "Since this is a word made up of a single kanji and nothing else, you can assume that this word will use the kun'yomi reading. The reading you learned for this kanji happens to be the kun'yomi reading as well. So if you know the kanji you know the reading.",
+      "reading_explanation_pt": "Sendo uma palavra de um unico kanji, usa a leitura kun'yomi. A leitura do kanji e いぬ.",
+      "context_sentences": [
+        { "ja": "ぼくのペットは犬です。", "pt": "My pet is a dog." },
+        { "ja": "この犬は、チワワですか？", "pt": "Is this dog a Chihuahua?" },
+        { "ja": "うちの犬、ライオンくらいの大きさなんです。", "pt": "My dog is about the size of a lion." }
+      ]
     }
   ],
   "vocabulary_kanji": [
     { "vocabulary_id": "vocab-ue", "kanji_id": "kanji-ue" },
     { "vocabulary_id": "vocab-ageru", "kanji_id": "kanji-ue" },
     { "vocabulary_id": "vocab-ichi", "kanji_id": "kanji-ichi" },
-    { "vocabulary_id": "vocab-jouzu", "kanji_id": "kanji-ue" }
+    { "vocabulary_id": "vocab-jouzu", "kanji_id": "kanji-ue" },
+    { "vocabulary_id": "vocab-otona", "kanji_id": "kanji-dai" },
+    { "vocabulary_id": "vocab-otona", "kanji_id": "kanji-person" },
+    { "vocabulary_id": "vocab-dog", "kanji_id": "kanji-dog" }
   ]
 }
