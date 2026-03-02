@@ -4,7 +4,7 @@
 -- 31-40: hell, 41-50: paradise, 51-60: reality
 -- =============================================
 
-INSERT INTO public.levels (id, tier) VALUES
+INSERT INTO public.level (id, tier) VALUES
   (1, 'pleasant'),
   (2, 'pleasant'),
   (3, 'pleasant'),
