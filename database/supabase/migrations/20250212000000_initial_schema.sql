@@ -15,55 +15,59 @@ CREATE TABLE public.level (
 );
 
 -- ---------------------------------------------
--- 2. Content: radical (no translated fields; use radical_translation)
+-- 2. Content: radical (id = text, e.g. character or slug for image radicals)
+-- Display: character (text) or image_svg (WaniKani-style satellite/image radicals).
 -- ---------------------------------------------
 CREATE TABLE public.radical (
-  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
-  character text NOT NULL,
+  id text PRIMARY KEY,
+  character text,
+  image_svg text,
   level_id integer NOT NULL REFERENCES public.level(id) ON DELETE CASCADE,
-  created_at timestamptz NOT NULL DEFAULT now()
+  created_at timestamptz NOT NULL DEFAULT now(),
+  updated_at timestamptz NOT NULL DEFAULT now(),
+  CONSTRAINT radical_display_check CHECK (character IS NOT NULL OR image_svg IS NOT NULL)
 );
 
 CREATE INDEX idx_radical_level_id ON public.radical(level_id);
 
 -- ---------------------------------------------
--- 2b. radical_translation (locale: en, pt, etc.)
+-- 2b. radical_translation (language: en, pt, etc.)
 -- ---------------------------------------------
 CREATE TABLE public.radical_translation (
-  radical_id uuid NOT NULL REFERENCES public.radical(id) ON DELETE CASCADE,
-  locale text NOT NULL,
-  name text NOT NULL,
-  mnemonic text NOT NULL DEFAULT '',
-  PRIMARY KEY (radical_id, locale)
+  radical_id text NOT NULL REFERENCES public.radical(id) ON DELETE CASCADE,
+  language text NOT NULL,
+  meaning text NOT NULL,
+  meaning_mnemonic text NOT NULL DEFAULT '',
+  PRIMARY KEY (radical_id, language)
 );
 
 CREATE INDEX idx_radical_translation_radical_id ON public.radical_translation(radical_id);
 
 -- ---------------------------------------------
--- 3. Content: kanji (no translated fields; use kanji_translation)
+-- 3. Content: kanji (id = text; translations in kanji_translation)
 -- ---------------------------------------------
 CREATE TABLE public.kanji (
-  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  id text PRIMARY KEY,
   character text NOT NULL,
-  alternatives text[] NOT NULL DEFAULT '{}',
   level_id integer NOT NULL REFERENCES public.level(id) ON DELETE CASCADE,
   onyomi text[] NOT NULL DEFAULT '{}',
   kunyomi text[] NOT NULL DEFAULT '{}',
-  created_at timestamptz NOT NULL DEFAULT now()
+  created_at timestamptz NOT NULL DEFAULT now(),
+  updated_at timestamptz NOT NULL DEFAULT now()
 );
 
 CREATE INDEX idx_kanji_level_id ON public.kanji(level_id);
 
 -- ---------------------------------------------
--- 3b. kanji_translation (locale: en, pt, etc.)
+-- 3b. kanji_translation (language: en, pt, etc. — same pattern as radical_translation)
 -- ---------------------------------------------
 CREATE TABLE public.kanji_translation (
-  kanji_id uuid NOT NULL REFERENCES public.kanji(id) ON DELETE CASCADE,
-  locale text NOT NULL,
+  kanji_id text NOT NULL REFERENCES public.kanji(id) ON DELETE CASCADE,
+  language text NOT NULL,
   meaning text NOT NULL,
   meaning_mnemonic text NOT NULL DEFAULT '',
   reading_mnemonic text NOT NULL DEFAULT '',
-  PRIMARY KEY (kanji_id, locale)
+  PRIMARY KEY (kanji_id, language)
 );
 
 CREATE INDEX idx_kanji_translation_kanji_id ON public.kanji_translation(kanji_id);
@@ -72,38 +76,42 @@ CREATE INDEX idx_kanji_translation_kanji_id ON public.kanji_translation(kanji_id
 -- 4. N:N kanji_radical
 -- ---------------------------------------------
 CREATE TABLE public.kanji_radical (
-  kanji_id uuid NOT NULL REFERENCES public.kanji(id) ON DELETE CASCADE,
-  radical_id uuid NOT NULL REFERENCES public.radical(id) ON DELETE CASCADE,
+  kanji_id text NOT NULL REFERENCES public.kanji(id) ON DELETE CASCADE,
+  radical_id text NOT NULL REFERENCES public.radical(id) ON DELETE CASCADE,
   PRIMARY KEY (kanji_id, radical_id)
 );
 
 CREATE INDEX idx_kanji_radical_radical_id ON public.kanji_radical(radical_id);
 
 -- ---------------------------------------------
--- 5. Content: vocabulary (no translated fields; use vocabulary_translation)
+-- 5. Content: vocabulary (id = text; JP context_sentences here; translations in vocabulary_translation)
 -- ---------------------------------------------
 CREATE TABLE public.vocabulary (
-  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  id text PRIMARY KEY,
   word text NOT NULL,
   reading text NOT NULL,
   word_type text NOT NULL DEFAULT '',
   level_id integer NOT NULL REFERENCES public.level(id) ON DELETE CASCADE,
-  created_at timestamptz NOT NULL DEFAULT now()
+  context_sentences jsonb NOT NULL DEFAULT '[]',
+  created_at timestamptz NOT NULL DEFAULT now(),
+  updated_at timestamptz NOT NULL DEFAULT now()
 );
 
 CREATE INDEX idx_vocabulary_level_id ON public.vocabulary(level_id);
 
 -- ---------------------------------------------
--- 5b. vocabulary_translation (locale: en, pt, etc.)
+-- 5b. vocabulary_translation (language: en, pt, etc. — meaning, mnemonics, example1–3)
 -- ---------------------------------------------
 CREATE TABLE public.vocabulary_translation (
-  vocabulary_id uuid NOT NULL REFERENCES public.vocabulary(id) ON DELETE CASCADE,
-  locale text NOT NULL,
+  vocabulary_id text NOT NULL REFERENCES public.vocabulary(id) ON DELETE CASCADE,
+  language text NOT NULL,
   meaning text NOT NULL,
-  meaning_explanation text NOT NULL DEFAULT '',
-  reading_explanation text NOT NULL DEFAULT '',
-  context_sentences jsonb NOT NULL DEFAULT '[]',
-  PRIMARY KEY (vocabulary_id, locale)
+  meaning_mnemonic text NOT NULL DEFAULT '',
+  reading_mnemonic text NOT NULL DEFAULT '',
+  example_1 text NOT NULL DEFAULT '',
+  example_2 text NOT NULL DEFAULT '',
+  example_3 text NOT NULL DEFAULT '',
+  PRIMARY KEY (vocabulary_id, language)
 );
 
 CREATE INDEX idx_vocabulary_translation_vocabulary_id ON public.vocabulary_translation(vocabulary_id);
@@ -112,8 +120,8 @@ CREATE INDEX idx_vocabulary_translation_vocabulary_id ON public.vocabulary_trans
 -- 6. N:N vocabulary_kanji
 -- ---------------------------------------------
 CREATE TABLE public.vocabulary_kanji (
-  vocabulary_id uuid NOT NULL REFERENCES public.vocabulary(id) ON DELETE CASCADE,
-  kanji_id uuid NOT NULL REFERENCES public.kanji(id) ON DELETE CASCADE,
+  vocabulary_id text NOT NULL REFERENCES public.vocabulary(id) ON DELETE CASCADE,
+  kanji_id text NOT NULL REFERENCES public.kanji(id) ON DELETE CASCADE,
   PRIMARY KEY (vocabulary_id, kanji_id)
 );
 
@@ -133,7 +141,7 @@ CREATE TABLE public.user_profile (
 CREATE TABLE public.user_item_progress (
   id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id uuid NOT NULL REFERENCES public.user_profile(id) ON DELETE CASCADE,
-  item_id uuid NOT NULL,
+  item_id text NOT NULL,
   item_type text NOT NULL CHECK (item_type IN ('radical', 'kanji', 'vocabulary')),
   srs_stage smallint NOT NULL DEFAULT 0 CHECK (srs_stage >= 0 AND srs_stage <= 9),
   next_review_at timestamptz,
